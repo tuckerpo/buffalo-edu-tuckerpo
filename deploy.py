@@ -18,7 +18,7 @@ def stage_changes(changes):
         subprocess.check_output(['git', 'add', change])
 
 def commit_changes(msg):
-    subprocess.check_output(['git', 'commit', '-m', msg])
+    subprocess.check_output(['git', 'commit', '-m', msg.strip()])
 
 def push_changes(branch):
     subprocess.check_output(['git', 'push', 'origin', branch])
